@@ -11,6 +11,16 @@ public class OrderDTO {
     private BigDecimal orderAmount;
     private List<BigInteger> orderItems;
 
+    public OrderDTO() {
+    }
+
+    public OrderDTO(BigInteger orderId, BigInteger customerId, BigDecimal orderAmount, List<BigInteger> orderItems) {
+        this.orderId = orderId;
+        this.customerId = customerId;
+        this.orderAmount = orderAmount;
+        this.orderItems = orderItems;
+    }
+
     public BigInteger getOrderId() {
         return orderId;
     }

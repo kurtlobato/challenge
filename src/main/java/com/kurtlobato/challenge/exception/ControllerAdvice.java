@@ -15,6 +15,11 @@ public class ControllerAdvice {
         return ResponseEntity.status(exception.getCode()).body(new ErrorResponse<>(exception.getCode().toString(), exception.getMessage(), exception.getValidationErrors()));
     }
 
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleValidationException(final Exception exception) {
+        return ResponseEntity.status(500).body(new ErrorResponse<>("500", exception.getMessage(), null));
+    }
+
     static class ErrorResponse<T> {
 
         private String code;
