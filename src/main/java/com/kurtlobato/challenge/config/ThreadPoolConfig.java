@@ -11,7 +11,7 @@ public class ThreadPoolConfig {
 
     @Bean
     public ExecutorService taskExecutor() {
-        return Executors.newFixedThreadPool(10);
+        return Executors.newFixedThreadPool(900);
     }
 
 }

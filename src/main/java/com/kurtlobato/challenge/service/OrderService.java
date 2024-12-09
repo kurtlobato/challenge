@@ -20,7 +20,8 @@ public class OrderService {
 
     Logger log = LoggerFactory.getLogger(OrderService.class);
 
-    private final Map<BigInteger, OrderItemDTO> orderItemCache = Collections.synchronizedMap(new HashMap<>());
+    //Lo dejamos public solo para testear
+    public final Map<BigInteger, OrderItemDTO> orderItemCache = Collections.synchronizedMap(new HashMap<>());
 
     private final ExecutorService executorService;
 
