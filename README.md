@@ -17,5 +17,6 @@ Para levantar la aplicación con maven se debe correr el comando
 |800|2129|23727         
 |900|2125|23770         
 |1000|2662|20344         
+
 Las pruebas de rendimiento parecen indicar que el número óptimo para la thread pool es de 500 threads
 Las pruebas fueron realizadas con JMeter configurado a 1000 users con 10 repeticiones, el tamaño de la heap para las pruebas se mantuvo en el default de 200mb
